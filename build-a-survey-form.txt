@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label, input, select, textarea {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+        input, select, textarea {
+            padding: 8px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Please fill out this survey to help us improve.</p>
+        <form id="survey-form">
+            <label id="name-label" for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            
+            <label id="email-label" for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            
+            <label id="number-label" for="number">Age (optional)</label>
+            <input type="number" id="number" min="10" max="100" placeholder="Enter your age">
+            
+            <label for="dropdown">How did you hear about us?</label>
+            <select id="dropdown">
+                <option value="">Select an option</option>
+                <option value="friend">Friend</option>
+                <option value="social-media">Social Media</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label>Would you recommend us?</label>
+            <input type="radio" name="recommend" value="yes"> Yes
+            <input type="radio" name="recommend" value="no"> No
+            
+            <label>What features do you like?</label>
+            <input type="checkbox" value="design"> Design
+            <input type="checkbox" value="usability"> Usability
+            <input type="checkbox" value="content"> Content
+            
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" rows="4" placeholder="Enter your comments"></textarea>
+            
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
